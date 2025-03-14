@@ -1,49 +1,144 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default styles */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF; /* White background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    background-color: #ADD8E6; /* Light blue */
+    text-align: center;
+    padding: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+header .logo img {
+    width: 150px;
+    height: auto;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #333;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+header p {
+    font-size: 1.2em;
+    color: #555;
 }
 
-.hero {
-    background: url('https://source.unsplash.com/1600x900/?technology,nature') no-repeat center center/cover;
-    color: white;
-    padding: 50px;
+/* Main Content Styling */
+main {
+    padding: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    background: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
+/* Banner Section */
+.banner img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
 
+/* About Section */
+.about {
+    background-color: #90EE90; /* Light green */
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ADD8E6; /* Light blue */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.1em;
+}
+
+/* Footer Styling */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #90EE90; /* Light green */
+    text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .gallery-images img {
+        max-width: 300px;
+    }
 }
