@@ -1,3 +1,3 @@
 function showMessage() {
-    alert("Hello! Welcome to my website.");
+    alert("Welcome! Your journey to a great website begins now.");
 }
