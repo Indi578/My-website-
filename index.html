@@ -35,10 +35,12 @@
         <!-- Gallery Section -->
         <section class="gallery">
             <h2>Our School in Action</h2>
-            <div class="gallery-images">
-                <img src="images/students.jpg" alt="Students at School">
-                <img src="images/school-building.jpg" alt="School Building">
+            <div class="gallery-slideshow">
+                <img src="images/students.jpg" alt="Students at School" class="slide">
+                <img src="images/school-building.jpg" alt="School Building" class="slide">
             </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </section>
 
         <!-- Contact Section -->
@@ -51,7 +53,13 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Royal International School Indi. All rights reserved.</p>
+        <p>© 2025 Royal International School Indi. All rights reserved.</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html
