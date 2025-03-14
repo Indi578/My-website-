@@ -73,6 +73,7 @@ main {
 .gallery {
     text-align: center;
     margin: 20px 0;
+    position: relative;
 }
 
 .gallery h2 {
@@ -80,19 +81,55 @@ main {
     margin-bottom: 20px;
 }
 
-.gallery-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.gallery-slideshow {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.gallery-images img {
+.gallery-slideshow .slide {
+    display: none;
     width: 100%;
-    max-width: 400px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-slideshow .slide.active {
+    display: block;
+}
+
+.gallery-slideshow .slide:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Slideshow Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ADD8E6; /* Light blue */
+    color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #90EE90; /* Light green */
 }
 
 /* Contact Section */
@@ -128,6 +165,26 @@ footer p {
     color: #333;
 }
 
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ADD8E6; /* Light blue */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop:hover {
+    background-color: #90EE90; /* Light green */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
@@ -138,7 +195,12 @@ footer p {
         font-size: 1em;
     }
 
-    .gallery-images img {
-        max-width: 300px;
+    .gallery-slideshow {
+        max-width: 100%;
+    }
+
+    .prev, .next {
+        font-size: 1.2em;
+        padding: 8px;
     }
 }
